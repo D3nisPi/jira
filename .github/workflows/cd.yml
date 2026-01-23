@@ -2,6 +2,10 @@ name: CD - Build & Push Docker image
 
 on:
   workflow_dispatch:
+    inputs:
+      jira_key:
+        description: 'Jira issue key'
+        required: true
   push:
     branches:
       - main
